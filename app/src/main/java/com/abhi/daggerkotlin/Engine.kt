@@ -1,6 +1,6 @@
 package com.abhi.daggerkotlin
 
-import javax.inject.Inject
+interface Engine {
 
-class Engine @Inject constructor() {
+    fun start(): Unit
 }
