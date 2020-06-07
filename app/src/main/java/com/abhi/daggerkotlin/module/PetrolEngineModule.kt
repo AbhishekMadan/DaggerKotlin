@@ -7,9 +7,11 @@ import dagger.Module
 import dagger.Provides
 
 @Module
-class PetrolEngineModule {
+class PetrolEngineModule constructor(val capacity: Int) {
 
     @Provides
     @PetrolEngineAnno
-    fun providesPetrolEngine(petrolEngine: PetrolEngine): Engine = petrolEngine
+    fun providesPetrolEngine(): Engine {
+        return PetrolEngine(capacity)
+    }
 }

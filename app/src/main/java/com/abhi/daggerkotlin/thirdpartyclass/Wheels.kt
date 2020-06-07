@@ -1,7 +1,5 @@
 package com.abhi.daggerkotlin.thirdpartyclass
 
-import javax.inject.Inject
-
 /**
  * Consider this as a third party class
  */

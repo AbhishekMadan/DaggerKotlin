@@ -3,6 +3,7 @@ package com.abhi.daggerkotlin
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.abhi.daggerkotlin.component.DaggerCarComponent
+import com.abhi.daggerkotlin.module.PetrolEngineModule
 import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
@@ -14,7 +15,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        DaggerCarComponent.create()
+        DaggerCarComponent
+            .builder()
+            .petrolEngineModule(PetrolEngineModule(10))
+            .build()
             .inject(this)
 
         car.start()
