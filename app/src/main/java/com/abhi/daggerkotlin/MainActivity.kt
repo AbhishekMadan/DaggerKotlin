@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
 
         DaggerCarComponent
             .builder()
-            .petrolEngineModule(PetrolEngineModule(10))
+            .capacity(20)
             .build()
             .inject(this)
 
