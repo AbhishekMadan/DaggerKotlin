@@ -5,11 +5,13 @@ import com.abhi.daggerkotlin.Engine
 import com.abhi.daggerkotlin.annotation.DieselEngineAnno
 import dagger.Module
 import dagger.Provides
+import javax.inject.Singleton
 
 @Module
 class DieselEngineModule {
 
     @Provides
     @DieselEngineAnno
+    @Singleton
     fun providesDieselEngine(dieselEngine: DieselEngine): Engine = dieselEngine
 }

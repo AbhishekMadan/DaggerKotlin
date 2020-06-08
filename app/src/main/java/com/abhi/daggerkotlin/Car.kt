@@ -7,6 +7,7 @@ import javax.inject.Inject
 class Car @Inject constructor(@PetrolEngineAnno var engine: Engine, var wheels: Wheels) {
 
     fun start() {
+        println("Putting engine: $engine" )
         engine.start()
         println("Starting Car...!")
     }

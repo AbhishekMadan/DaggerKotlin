@@ -6,7 +6,9 @@ import com.abhi.daggerkotlin.module.PetrolEngineModule
 import com.abhi.daggerkotlin.module.WheelModule
 import dagger.BindsInstance
 import dagger.Component
+import javax.inject.Singleton
 
+@Singleton
 @Component(
     modules = [
         PetrolEngineModule::class,
