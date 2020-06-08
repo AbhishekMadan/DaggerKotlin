@@ -9,13 +9,10 @@ import dagger.Component
 import javax.inject.Singleton
 
 @Singleton
-@Component(
-    modules = [
-        PetrolEngineModule::class,
-        DieselEngineModule::class,
-        WheelModule::class]
-)
-interface CarComponent {
+@Component(modules = [PetrolEngineModule::class,
+    DieselEngineModule::class,
+    WheelModule::class])
+interface AppComponent {
 
     fun inject(mainActivity: MainActivity)
 
@@ -25,6 +22,6 @@ interface CarComponent {
         @BindsInstance
         fun capacity(capacity: Int): Builder
 
-        fun build(): CarComponent
+        fun build(): AppComponent
     }
 }
