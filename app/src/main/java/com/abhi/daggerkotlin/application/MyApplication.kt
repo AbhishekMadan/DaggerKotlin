@@ -11,7 +11,7 @@ class MyApplication: Application() {
     override fun onCreate() {
         super.onCreate()
         appComponent = DaggerAppComponent.builder()
-            .capacity(100)
+            .driver("Andrew")
             .build()
     }
 }
